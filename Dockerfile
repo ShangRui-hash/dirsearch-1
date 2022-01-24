@@ -1,5 +1,5 @@
 FROM python:3.7-alpine
-LABEL maintainer="maurosoria@protonmail.com"
+
 
 WORKDIR /root/
 ADD . /root/
@@ -18,5 +18,5 @@ RUN pip install cryptography==2.8 \
     urllib3 \
     certifi
 
-ENTRYPOINT ["./dirsearch.py"]
+ENTRYPOINT ["python3","/root/dirsearch.py"]
 CMD ["--help"]
